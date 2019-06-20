@@ -1,3 +1,4 @@
+
 #install dependencies
 sudo apt install -y wget vim openjdk-8-jdk openjdk-8-jre
 
@@ -13,7 +14,7 @@ sudo su - jenkins -c " wget http://updates.jenkins-ci.org/latest/jenkins.war"
 sudo cp jenkins.service /etc/systemd/system/jenkins.service
 
 #Load service
-sudo su - jenkins -c "system daemon-reload"
+sudo systemctl daemon-reload
 
 #Start Jenkins service
-sudo su - jenkins -c "systemctl start jenkins"
+sudo systemctl start jenkins
