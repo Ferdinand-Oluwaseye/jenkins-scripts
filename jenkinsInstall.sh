@@ -1,6 +1,6 @@
 
 #install dependencies
-sudo apt install -y wget vim openjdk-8-jdk openjdk-8-jre
+sudo apt install -y wget vim default-jre openjdk-11-jre-headless openjdk-8-jre-headless
 
 #creating a user
 sudo useradd --create-home jenkins
