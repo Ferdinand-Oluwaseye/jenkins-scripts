@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
 	echo "User exists"
 else
 	sudo useradd --create-home jenkins
-  sudo usermod --shell /bin/bash jenkins
+  	sudo usermod --shell /bin/bash jenkins
 fi
 
 #Enter user environment
