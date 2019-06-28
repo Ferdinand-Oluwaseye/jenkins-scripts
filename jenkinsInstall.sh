@@ -2,9 +2,16 @@
 #install dependencies
 sudo apt install -y wget vim openjdk-8-jdk openjdk-8-jre
 
+#check for user password
+getent passwd pythonuser > /dev/null
+
 #creating a user
-sudo useradd --create-home jenkins
-sudo usermod --shell /bin/bash jenkins
+if [ $? -eq 0 ]; then
+	echo "User exists"
+else
+	sudo useradd --create-home jenkins
+  sudo usermod --shell /bin/bash jenkins
+fi
 
 #Enter user environment
 sudo su - jenkins -c " wget http://updates.jenkins-ci.org/latest/jenkins.war"
